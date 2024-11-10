@@ -1,0 +1,11 @@
+runtime: python312
+env: standard
+instance_class: F4_1G
+entrypoint: gunicorn -b :$PORT server:app
+
+# Standard environment configurations
+automatic_scaling:
+  min_idle_instances: automatic
+  max_idle_instances: automatic
+  min_pending_latency: automatic
+  max_pending_latency: automatic
